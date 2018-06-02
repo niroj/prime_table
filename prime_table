@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+#/ Usage: prime_table [options]
+#/ -n   N number of prime, default: 10
+#/ -t   Table size, default: 10
+
+$stderr.sync = true
+require 'optparse'
+require './lib/prime_number'
+
+# default options
+number = 10
+table_size = 10
+
+
+ARGV.options do |opts|
+  opts.on("-n")                 { number = ARGV[0] }
+  opts.on("-t")                 { table_size = ARGV[0] }
+  opts.on_tail("-h", "--help")  { exec "grep ^#/<'#{__FILE__}'|cut -c4-" }
+  opts.parse!
+end
+
+

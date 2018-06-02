@@ -1,0 +1,3 @@
+class PrimeNumber
+
+end
