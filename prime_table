@@ -24,7 +24,6 @@ end
 prime_number = PrimeNumber.new(number)
 number_table = NumberTable.new(table_size)
 puts number_table.header
-loop do
+while(prime_number.calculate_next_prime_if_eligible)
   puts number_table.row(prime_number.current_prime)
-  break unless prime_number.calculate_next_prime_if_eligible
 end

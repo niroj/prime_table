@@ -4,7 +4,7 @@ class PrimeNumber
 
   def initialize(number_of_primes = 10)
     @number_of_primes = number_of_primes.to_i
-    @current_prime = 2
+    @current_prime = 1
     @number_of_primes_calculated = 1
   end
 
@@ -24,7 +24,7 @@ class PrimeNumber
   end
 
   def all_primes_calculated?
-    @number_of_primes_calculated >= @number_of_primes
+    @number_of_primes_calculated > @number_of_primes
   end
 
   def calculate_next_prime_if_eligible
