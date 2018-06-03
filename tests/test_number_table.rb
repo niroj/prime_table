@@ -1,5 +1,5 @@
-require "minitest/autorun"
-require "./lib/number_table"
+require 'minitest/autorun'
+require './lib/number_table'
 
 class NumberTableTest < Minitest::Test
   def setup
